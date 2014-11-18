@@ -1,0 +1,6 @@
+#!/bin/bash
+case ${DWB_SCHEME} in
+mailto) xterm -e alpine ${DWB_URI};;
+magnet) /bin/magnet ${DWB_URI};;
+ftp) filezilla ${DWB_URI};;
+esac
