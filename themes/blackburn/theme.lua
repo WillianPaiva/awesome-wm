@@ -110,15 +110,4 @@ theme.widget_gmail      = themes_dir .. "/widgets/mail.png"
 theme.widget_batt       = themes_dir .. "/widgets/bat.png"
 theme.widget_clock      = themes_dir .. "/widgets/clock.png"
 theme.widget_vol        = themes_dir .. "/widgets/spkr.png"
-
-theme.lain_icons         = os.getenv("HOME") .. "/.config/awesome/lain/icons/layout/default/"
-theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
-theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
-theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
-theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
-theme.layout_uselesspiral      = themes_dir .. "/icons/spiral.png"
-theme.layout_uselessfair       = themes_dir .. "/icons/fairv.png"
-
-
 return theme
-

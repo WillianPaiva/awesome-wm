@@ -84,7 +84,7 @@ function run_once(cmd)
 
 
 
---run_once("killall conky")
+run_once("killall conky")
 run_once("compton --backend glx --paint-on-overlay --vsync opengl-swc --unredir-if-possible --shadow-exclude 'n:a:synapse' --blur-background-exclude 'n:a:synapse' --config ~/.compton.conf -b")
 run_once("nm-applet")
 run_once("setxkbmap fr -option caps:escape")
@@ -96,7 +96,6 @@ run_once("batterymon")
 run_once("caffeine")
 run_once("synapse")
 run_once("volumeicon")
-run_once("octopi-notifier")
 run_once("blueman-applet")
 
 run_once("/opt/dropbox/dropboxd")
@@ -105,7 +104,9 @@ run_once("mopidy")
 --run_once("dropboxd")
 --run_once("/home/willian/.conky/NightDrive/start_conky.sh")
 run_once("xset -b")
+run_once("conky ~/.conkyrc")
 run_once("unclutter -idle 10")
+run_once("octopi-notifier")
 
 
 -- Localization
