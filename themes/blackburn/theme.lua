@@ -9,32 +9,33 @@
 theme = {}
 
 themes_dir                                  = os.getenv("HOME") .. "/.config/awesome/themes/blackburn"
-theme.wallpaper                             = themes_dir .. "/wall3.jpg"
+theme.wallpaper                             = themes_dir .. "/bioshock-game-hd-wallpaper-1920x1080-38763.jpg"
 
 themes_bg_normal                            = "png:" .. themes_dir .. "/taskbar/bg_normal.png"
 themes_bg_focus                             = "png:" .. themes_dir .. "/taskbar/bg_focus.png"
 
-theme.font                                  = "Ubuntu Mono 9"
-theme.fg_normal                             = "#43454f"
+theme.font                                  = "Ubuntu Mono 11"
+theme.taglist_font                          = "Ubuntu Mono 11"
+theme.fg_normal                             = "#03A9f4"
 theme.fg_focus                              = "#f40b20"
 theme.fg_urgent                             = "#224440"
-theme.bg_normal                             = "#01080a"
+theme.bg_normal                             = "#424242"
 theme.bg_focus                              = "#01080a"
 theme.bg_urgent                             = "#051014"
-theme.border_width                          = "1"
+theme.border_width                          = "0"
 theme.border_normal                         = "#292727"
 theme.border_focus                          = "#3d3a3a"
 theme.border_marked                         = "#292741"
 theme.titlebar_bg_focus                     = "#091114"
 theme.titlebar_bg_normal                    = "#091154"
-theme.taglist_fg_focus                      = "#529366"
 theme.tasklist_bg_focus                     = "#01080a"
 theme.tasklist_fg_focus                     = "#bf1e2d"
-theme.textbox_widget_margin_top             = 1
+theme.textbox_widget_margin_top             = 0
 theme.notify_fg                             = theme.fg_normal
 theme.notify_bg                             = theme.bg_normal
 theme.notify_border                         = theme.border_focus
-theme.taglist_bg_focus                      = "#01080a"
+theme.taglist_bg_focus                      = "#03A9f4"
+theme.taglist_fg_focus                      = "#424242"
 theme.awful_widget_height                   = 14
 theme.awful_widget_margin_top               = 10
 theme.awful_widget_margin_bottom			= 10
@@ -50,7 +51,6 @@ theme.menu_submenu_icon = themes_dir .. "/icons/submenu.png"
 theme.menu_height = "15"
 theme.menu_width  = "100"
 
- 
 -- Define the image to load
 theme.titlebar_close_button_normal = "/usr/share/awesome/themes/default/titlebar/close_normal.png"
 theme.titlebar_close_button_focus  = "/usr/share/awesome/themes/default/titlebar/close_focus.png"
@@ -97,17 +97,18 @@ theme.layout_floating                       = themes_dir .. "/icons/floating.png
 -- Vicious
  
 theme.widget_sys        = themes_dir .. "/widgets/dish.png"
-theme.widget_pac        = themes_dir .. "/widgets/pacman.png"
-theme.widget_arch       = themes_dir .. "/widgets/arch.png"
-theme.widget_temp       = themes_dir .. "/widgets/temp.png"
-theme.widget_uptime     = themes_dir .. "/widgets/ac.png"
-theme.widget_cpu        = themes_dir .. "/widgets/cpu.png"
-theme.widget_mem        = themes_dir .. "/widgets/mem.png"
-theme.widget_fs         = themes_dir .. "/widgets/fs.png"
+theme.widget_pac        = themes_dir .. "/widgets/applications-games.svg"
+theme.widget_arch       = themes_dir .. "/widgets/distributor-logo.svg"
+theme.widget_temp       = themes_dir .. "/widgets/emblem-danger.svg"
+theme.widget_uptime     = themes_dir .. "/widgets/computer.svg"
+theme.widget_cpu        = themes_dir .. "/widgets/gpm-ac-adapter.svg"
+theme.widget_mem        = themes_dir .. "/widgets/gnome-dev-wavelan.svg"
+theme.widget_fs         = themes_dir .. "/widgets/computer.svg"
 theme.widget_netdown    = themes_dir .. "/widgets/net_down.png"
 theme.widget_netup      = themes_dir .. "/widgets/net_up.png"
 theme.widget_gmail      = themes_dir .. "/widgets/mail.png"
 theme.widget_batt       = themes_dir .. "/widgets/bat.png"
-theme.widget_clock      = themes_dir .. "/widgets/clock.png"
+theme.widget_clock      = themes_dir .. "/widgets/calendar.svg"
 theme.widget_vol        = themes_dir .. "/widgets/spkr.png"
+theme.arrow        = themes_dir .. "/icons/arrl_lr_pre.png"
 return theme
