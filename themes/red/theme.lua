@@ -23,17 +23,17 @@ theme.color = {
   -- shadow2   = "#313131",
   -- shadow3   = "#1c1c1c",
   -- shadow4   = "#767676"
-  main      = "#064E71",
-  gray      = "#575757",
-  bg        = "#161616",
-  bg_second = "#181818",
-  wibox     = "#202020",
-  icon      = "#a0a0a0",
-  text      = "#aaaaaa",
-  urgent    = "#B32601",
+  main      = "#57c7ff",
+  gray      = "#7b809d",
+  bg        = "#626784",
+  bg_second = "#7b809d",
+  wibox     = "#282a36",
+  icon      = "#a7aabe",
+  text      = "#5af78e",
+  urgent    = "#ff5c57",
   highlight = "#ffffff",
 
-  border    = "#404040",
+  border    = "#7b809d",
   shadow1   = "#141414",
   shadow2   = "#313131",
   shadow3   = "#1c1c1c",
@@ -108,7 +108,7 @@ theme.desktop.line_height = 18
 
 theme.desktop.color = {
 	main  = theme.color.main,
-	gray  = theme.color.gray_desktop or "#404040",
+	gray  = theme.color.gray_desktop or "#7b809d",
 	wibox = theme.color.bg .. "00"
 }
 

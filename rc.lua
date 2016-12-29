@@ -68,9 +68,9 @@ end
 local theme_path = os.getenv("HOME") .. "/.config/awesome/themes/red"
 beautiful.init(theme_path .. "/theme.lua")
 
-local terminal = "termite"
+local terminal = "hyper"
 local editor   = os.getenv("EDITOR") or "emacs"
-local editor_cmd = terminal .. " -e " .. editor
+local editor_cmd =" termite -e " .. editor
 local fm = "thunar"
 local modkey = "Mod4"
 
@@ -135,8 +135,8 @@ taglist.margin = pmargin.taglist
 
 taglist.buttons = awful.util.table.join(
 	awful.button({ modkey    }, 1, awful.client.movetotag),
-	awful.button({           }, 1, awful.tag.viewonly    ),
 	awful.button({           }, 2, awful.tag.viewtoggle  ),
+    awful.button({           }, 1, awful.tag.viewonly    ),
 	awful.button({ modkey    }, 3, awful.client.toggletag),
 	awful.button({           }, 3, function(t) redflat.widget.layoutbox:toggle_menu(t)    end),
 	awful.button({           }, 4, function(t) awful.tag.viewnext(awful.tag.getscreen(t)) end),
@@ -248,44 +248,9 @@ end
 io.close(file)
 
 
--- netwidget = blingbling.net({interface = inter, show_text = true})
--- netwidget:set_ippopup()
-
--- cpu_graph = blingbling.line_graph({ height = 18,
---                                         width = 100,
---                                         show_text = true,
---                                         label = "CPU",
---                                         rounded_size = 0.3,
---                                         graph_background_color = "#00000033",
---                                         graph_color = "#7e57c2",
---                                         graph_line_color = "#7e57c2"
---                                       })
--- vicious.register(cpu_graph, vicious.widgets.cpu,'$1',2)
-
--- mem_graph = blingbling.line_graph({ height = 18,
---                                         width = 100,
---                                         show_text = true,
---                                         label = "MEM",
---                                         rounded_size = 0.3,
---                                         graph_background_color = "#00000033",
---                                         graph_color = "#ef5350",
---                                         graph_line_color = "#ef5350"
---                                       })
--- vicious.register(mem_graph, vicious.widgets.mem,'$1',2)
-
-
--- cpu_graph:buttons(awful.util.table.join(
---   awful.button({ }, 1, function() redflat.float.top:show("cpu") end)
--- ))
-
--- mem_graph:buttons(awful.util.table.join(
---   awful.button({ }, 1, function() redflat.float.top:show("mem") end)
--- ))
-
-
 local monitor = {
-  cpu = redflat.widget.sysmonblingbling({ func = system.pformatted.cpu(80) }, { timeout = 2,  monitor = { label = "CPU" ,  color = "#7e57c2" } }),
-  mem = redflat.widget.sysmonblingbling({ func = system.pformatted.mem(80) }, { timeout = 2,  monitor = { label = "MEM" , color = "#ef5350" } }),
+  cpu = redflat.widget.sysmonblingbling({ func = system.pformatted.cpu(80) }, { timeout = 2,  monitor = { label = "CPU" ,  color = "#ff5c57" } }),
+  mem = redflat.widget.sysmonblingbling({ func = system.pformatted.mem(80) }, { timeout = 2,  monitor = { label = "MEM" , color = "#ff6ac1" } }),
   -- mem = redflat.widget.sysmon({ func = system.pformatted.mem(80) }, { timeout = 10, monitor = { label = "RAM" } }),
 	bat = redflat.widget.sysmon(
     { func = system.pformatted.bat(15), arg = "BAT0" },
@@ -516,26 +481,6 @@ function run_once(cmd)
   awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
 end
 
--- if not stamp or (os.time() - tonumber(stamp)) > 5 then
-	-- utils
-  -- awful.util.spawn_with_shell("compton")
-  -- awful.util.spawn_with_shell("pulseaudio")
-  -- awful.util.spawn_with_shell("/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1")
-  -- awful.util.spawn_with_shell("nm-applet")
-  -- awful.util.spawn_with_shell("bash /home/vorron/Documents/scripts/tmpfs_firefox.sh")
-  -- awful.util.spawn_with_shell("xrdb -merge /home/vorron/.Xdefaults")
-
-  -- -- keyboard layouts
-  -- --awful.util.spawn_with_shell("setxkbmap -layout 'us,ru' -variant ',winkeys,winkeys' -option grp:caps_toggle")
-  -- awful.util.spawn_with_shell("setxkbmap -layout 'us,ru' -variant ',winkeys,winkeys' -option grp:rctrl_toggle")
-  -- awful.util.spawn_with_shell("xkbcomp $DISPLAY - | egrep -v 'group . = AltGr;' | xkbcomp - $DISPLAY")
-  -- awful.util.spawn_with_shell("sleep 1 && bash /home/vorron/Documents/scripts/swapctrl.sh")
-  -- awful.util.spawn_with_shell("kbdd")
-
-  -- -- apps
-  -- awful.util.spawn_with_shell("parcellite")
-  -- awful.util.spawn_with_shell("exaile")
-  -- awful.util.spawn_with_shell("sleep 0.5 && transmission-gtk -m")
   run_once("compton --backend glx --paint-on-overlay --vsync opengl-swc --unredir-if-possible --shadow-exclude 'n:a:synapse' --blur-background-exclude 'n:a:synapse' --config ~/.compton.conf")
   run_once("nm-applet")
   run_once("setxkbmap -option caps:escape")
@@ -549,10 +494,11 @@ end
   run_once("xset -b")
   run_once("unclutter -idle 4")
   run_once("transmission-gtk -m -p 9095")
-  run_once("nitrogen --restore")
+  run_once("feh --bg-fill ~/Pictures/epic-wallpapers32.jpg")
   run_once("source ~.profile")
+  -- run_once("insync start")
   run_once("synergys -c ~/.config/Synergy/syn.conf -f --name archlinux")
 -- end
 
-
 --]]
+
